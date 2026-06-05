@@ -138,6 +138,8 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_g1dw6"]
+
 [node name="Player" type="CharacterBody2D" unique_id=327605990]
 script = ExtResource("1_rkbax")
 
@@ -152,3 +154,8 @@ frame_progress = 0.6762763
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112516422]
 zoom = Vector2(4, 4)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=486969422]
+root_node = NodePath("../AnimatedSprite2D")
+tree_root = SubResource("AnimationNodeBlendSpace2D_g1dw6")
+parameters/blend_position = Vector2(0, 0)

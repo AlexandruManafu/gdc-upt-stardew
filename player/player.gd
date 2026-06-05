@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @export var _speed: int = 300;
 var _direction: Vector2 = Vector2.ZERO
+var face_direction = 1
 
 func _ready() -> void:
 	pass
@@ -14,6 +15,7 @@ func _physics_process(delta: float) -> void:
 	velocity = _direction * _speed;
 	
 	if _direction != Vector2.ZERO:
+		animated_sprite_2d.flip_h = _direction.x == -1;
 		animated_sprite_2d.play("walk")
 	else:
 		animated_sprite_2d.play("idle")
