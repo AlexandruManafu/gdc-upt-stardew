@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b8vtw1l4g1jyg"]
 
+[ext_resource type="Script" uid="uid://cb114vfpmmca5" path="res://game.gd" id="1_7jktm"]
 [ext_resource type="PackedScene" uid="uid://qg7fan0qgnxv" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://nbi6tdwxmsna" path="res://icon.svg" id="1_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://bqdnbqcfrk0am" path="res://assets/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_feb5d"]
@@ -3566,6 +3567,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_feb5d")
 
 [node name="Game" type="Node2D" unique_id=449923127]
+script = ExtResource("1_7jktm")
+metadata/_edit_vertical_guides_ = [-91.0]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2005428512]
 visible = false
