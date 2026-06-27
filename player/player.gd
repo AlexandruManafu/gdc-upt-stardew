@@ -25,7 +25,7 @@ var can_move = true;
 
 #TOOL
 const TOOL_LEFT = 1.0
-const TOOL_RIGHT = -1.0
+const TOOL_RIGHT = -2.0
 const TOOL_OFFSET = 16
 
 #region BUILT-IN
@@ -88,6 +88,7 @@ func _on_tool_finished(tool: Tools)->void:
 	var tool_dir = TOOL_RIGHT if face_direction == -1 else TOOL_LEFT
 	var pos_offset = position + Vector2(tool_dir * TOOL_OFFSET, 0)
 	tool_used.emit(tool, pos_offset)
+	click = false
 		
 enum Tools{
 	dig,
